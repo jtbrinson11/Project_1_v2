@@ -24,7 +24,7 @@ public class DragonCavev2 {
         }
         catch (Exception e)
         {
-            System.out.println("Sorry, your input was invalid. Good-bye.");
+            System.out.println("Sorry, your input was invalid. Good-bye for now.");
             System.exit(-1);
         }
 
