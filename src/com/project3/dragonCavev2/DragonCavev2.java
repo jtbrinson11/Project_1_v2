@@ -10,17 +10,16 @@ public class DragonCavev2 {
                 "Each cave has a dragon inside of it. \nOne has a friendly dragon inside that will share his treasure with you. \n" +
                 "The other has a hungry dragon that will eat you. \nWhich cave will you go into? \n");
 
-        //takes user input
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Make your choice (1 or 2): ");
-
-        String input = scan.next();
+        //creates random number, and variable used for program flow
+        double outcome = (Math.random() <= 0.5) ? 1 : 2;
         int choice = 0;
 
-        //processes outcome with try/catch block to handle invalid user input
-        double outcome = (Math.random() <= 0.5) ? 1 : 2;
+        //takes user input and checks if invalid
         try
         {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Make your choice (1 or 2): ");
+            String input = scan.next();
             choice = Integer.parseInt(input);
         }
         catch (Exception e)
